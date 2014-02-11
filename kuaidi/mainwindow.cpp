@@ -26,7 +26,7 @@ void MainWindow::on_pushButton_clicked()
     QString order=ui->lineEdit->text();
     QString company=ui->comboBox->currentText();
     company=m_companyMap[company];
-    QString weburl="http://baidu.kuaidi100.com/query?type="+company+"&postid="+order;
+    QString weburl="http://www.kuaidi100.com/query?type="+company+"&postid="+order;
     qDebug()<<weburl;
     getInfo *info=new getInfo(weburl);
     if(info->checkStatus())
